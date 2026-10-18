@@ -31,6 +31,15 @@ npm run preview  # checks the built site at http://localhost:4173
 
 The `dist/` folder in this zip is already built, so you can publish it straight away.
 
+**GitHub Pages (automatic deploys from this repository)**
+1. Push your changes to the `main` branch on GitHub.
+2. In the repository, go to **Settings → Pages**.
+3. Under **Build and deployment → Source**, select **GitHub Actions**.
+4. Open the **Actions** tab and wait for the **Deploy to GitHub Pages** workflow to finish.
+5. Your site will be at https://sanushcj.github.io/Hayaath-Banking-/.
+
+The workflow builds the site and publishes it whenever you push to `main`. The first deployment may take a few minutes.
+
 **Easiest: Netlify Drop**
 1. Go to https://app.netlify.com/drop
 2. Drag the `dist` folder onto the page.
@@ -48,7 +57,7 @@ If you change anything, run `npm run build` again and re-upload `dist`.
 1. **Waitlist link.** Open `src/content.js` and paste your Google Form link into `waitlistUrl`.
    While it's empty, the final button says "Waitlist opens soon" and the other buttons scroll down to it.
 2. **Contact links.** In the same file, fill `email`, `linkedin` and `instagram`. Empty ones stay hidden.
-3. **Link previews.** In `index.html`, replace `https://YOUR-DOMAIN` (2 places) with your real site address.
+3. **Link previews.** If you use a custom domain, update the URLs in `index.html`.
    WhatsApp and LinkedIn need the full address to show the preview image (`public/og-image.png`).
 4. **Check the facts on the page are still true:**
    - "more than 30 students" (Problem scene) comes from your interviews. Update it if the number changes.
